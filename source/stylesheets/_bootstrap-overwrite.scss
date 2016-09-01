@@ -1,0 +1,37 @@
+.container-fluid {
+  box-shadow: 0px 0 30px lightgray;
+  width: 80%
+}
+
+nav {
+  border-bottom: 1px solid gray;
+  font-weight: normal;
+  font-variant: small-caps;
+}
+
+@media (min-width: $screen-sm-min) {
+  article {
+    border-right: 1px solid gray;
+  }
+  article, aside {
+    padding: 30px !important;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  article {
+    border-bottom: 1px solid gray;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-variant: small-caps;
+  color: #acacac;
+}
