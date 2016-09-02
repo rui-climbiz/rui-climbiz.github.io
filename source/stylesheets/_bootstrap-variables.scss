@@ -1,6 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:400';
 
-$font-family-sans-serif: Lato;
+$font-family-sans-serif: Lato, sans-serif;
 $font-size-base: 14px !default;
 $font-size-h1: floor(($font-size-base * 2)) !default; // ~28px
 $font-size-h2: floor(($font-size-base * 1.5)) !default; // ~21px
