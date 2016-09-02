@@ -13,7 +13,8 @@ nav {
   article {
     border-right: 1px solid gray;
   }
-  article, aside {
+  article > div,
+  aside > div {
     padding: 30px !important;
   }
 }

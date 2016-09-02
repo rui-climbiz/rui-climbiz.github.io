@@ -21,7 +21,7 @@
 
   <body class="<%= page_classes %>">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row header">
         <nav>
           <ul class="nav nav-justified">
             <li><%= link_to 'Home', './' %></li>
@@ -32,35 +32,39 @@
         </nav>
       </div>
 
-      <div class="row">
+      <div class="row main">
         <article class="col-sm-8">
-          <%= yield %>
+          <div>
+            <%= yield %>
+          </div>
         </article>
         <aside class="col-sm-4">
-          <h1>Contact</h1>
-          <p> Rui ITO, 伊東 瑠衣 (Ph.D.)<br />
-            Research fellow,<br />
-            Integrated Research on Disaster Risk Reduction Division,<br />
-            National Research Institute for Earth Science and Disaster Resilience (NIED),<br />
-            3-1, Tennoudai, Tsukuba,<br />
-            Ibaraki, 305-0006, JAPAN</p>
-          <p>mail:rui.ito(at)bosai.go.jp</p>
-          <p>tel:+81-29-863-7559<br />
-            fax:+81-29-863-7500</p>
-          <h1>Links</h1>
-          <ul>
-            <li><a href="https://si-cat.jp">SICAT</a></li>
-            <li><a href="http://www.jamstec.go.jp/sousei/">SOUSEI program</a></li>
-            <li><a href="http://ssrs.dpri.kyoto-u.ac.jp/~hp/index_en.html">Severe Storm & Atmos. Environ., Kyoto Univ.</a></li>
-            <li><a href="http://www-clim.kugi.kyoto-u.ac.jp/clim/index_e.html">Climate Physics Lab., Kyoto Univ.</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=100001967558545">Facebook</a></li>
-          </ul>
+          <div>
+            <h1>Contact</h1>
+            <p> Rui ITO, 伊東 瑠衣 (Ph.D.)<br />
+              Research fellow,<br />
+              Integrated Research on Disaster Risk Reduction Division,<br />
+              National Research Institute for Earth Science and Disaster Resilience (NIED),<br />
+              3-1, Tennoudai, Tsukuba,<br />
+              Ibaraki, 305-0006, JAPAN</p>
+            <p>mail:rui.ito(at)bosai.go.jp</p>
+            <p>tel:+81-29-863-7559<br />
+              fax:+81-29-863-7500</p>
+            <h1>Links</h1>
+            <ul>
+              <li><a href="https://si-cat.jp">SICAT</a></li>
+              <li><a href="http://www.jamstec.go.jp/sousei/">SOUSEI program</a></li>
+              <li><a href="http://ssrs.dpri.kyoto-u.ac.jp/~hp/index_en.html">Severe Storm & Atmos. Environ., Kyoto Univ.</a></li>
+              <li><a href="http://www-clim.kugi.kyoto-u.ac.jp/clim/index_e.html">Climate Physics Lab., Kyoto Univ.</a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=100001967558545">Facebook</a></li>
+            </ul>
+          </div>
         </aside>
       </div>
 
       <!-- Site footer -->
-      <div class="row">
-        <footer class="footer">
+      <div class="row footer">
+        <footer>
           <p>&copy; 2016 Rui ITO.</p>
         </footer>
       </div>

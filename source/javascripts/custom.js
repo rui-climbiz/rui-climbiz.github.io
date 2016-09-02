@@ -1,9 +1,11 @@
 function redraw() {
-  $('.container-fluid').css('min-height', $(window).height());
+  $('.main').css(
+    'min-height',
+    $(window).height() - $('.header').height() - $('.footer').height());
   if ($(window).width() < 768) {
     $('article').height('auto');
   } else {
-    $('article').height(Math.max($('article').height(), $('aside').height()));
+    $('article').height($('.main').height());
   }
 }
 $(window).resize(function() {
