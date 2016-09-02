@@ -72,3 +72,14 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+after_build do
+  system('find build -name "*.html" -print0|xargs -0 htmlbeautifier')
+end
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host = 'www.fdiary.net'
+  deploy.path = 'public_html/test/'
+  deploy.user = 'rui'
+end
