@@ -1,0 +1,168 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400";
+@import "https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css";
+
+@import "_normalize";
+@import "_box-sizing";
+@import "_clearfix";
+@import "_ie10-viewport-bug-workaround";
+
+@break-point: 768px;
+@text-color: #333;
+@link-color: #337ab7;
+@border-color: #999;
+
+// default font setting;
+body {
+  font-family: Lato, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 14px;
+  background: white;
+  color: @text-color;
+}
+
+// objects
+.o-layout {
+  .clearfix;
+  box-shadow: 0 0 30px lightgray;
+  width: 80%;
+  margin: 0 auto;
+}
+
+// scopes
+.s-header {
+  .clearfix;
+  border-bottom: 1px solid @border-color;
+}
+
+.s-nav__toggle {
+  display: none;
+}
+
+.s-nav__trigger {
+  color: #ddd;
+  text-decoration: none;
+  &:active,
+  &:hover {
+    color: white;
+  }
+}
+
+.s-nav__menu {
+  margin: 0;
+  padding: 0;
+}
+
+.s-nav__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+.s-nav__link {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  text-decoration: none;
+  font-variant: small-caps;
+  color: @link-color;
+  &:hover,
+  &:active {
+    background: #eee;
+    color: darken(@link-color, 10%);
+  }
+}
+
+.s-main {
+  .clearfix;
+  clear: both;
+  h1, h2, h3, h4 {
+    font-weight: 400;
+    font-variant: small-caps;
+    color: #999;
+  }
+  a {
+    text-decoration: none;
+    color: @link-color;
+    &:active,
+    &:hover {
+      color: darken(@link-color, 10%);
+      text-decoration: underline;
+    }
+  }
+  p {
+    line-height: 140%;
+  }
+}
+
+.s-article {
+  float: left;
+  width: 66%;
+  padding: 30px;
+  border-right: 1px solid @border-color;
+}
+
+.s-aside {
+  float: right;
+  width: 34%;
+  padding: 30px;
+}
+
+.s-footer {
+  .clearfix;
+  border-top: 1px solid @border-color;
+  clear: both;
+  text-align: center;
+}
+
+.s-footer__copyright {
+  padding: 20px;
+}
+
+// mobile
+@media (max-width: (@break-point - 1)) {
+  .o-layout {
+    width: 100%;
+  }
+
+  .s-header {
+    border-bottom: none;
+  }
+
+  .s-nav__toggle {
+    display: block;
+    width: 100%;
+    background: @text-color;
+    color: white;
+    text-align: right;
+    height: 24px;
+    padding: 2px 7px 6px;
+    font-size: 16px;
+  }
+
+  .s-nav__menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #ddd;
+    width: 50%;
+  }
+
+  .s-nav__item {
+    float: none;
+    width: 100%;
+  }
+
+  .s-article {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid @border-color;
+    padding: 20px;
+  }
+
+  .s-aside {
+    width: 100%;
+    padding: 20px;
+  }
+}
