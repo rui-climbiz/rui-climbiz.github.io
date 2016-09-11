@@ -7,6 +7,8 @@
 #   config.output_style = :compact
 # end
 
+set :less
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -80,6 +82,6 @@ end
 activate :deploy do |deploy|
   deploy.method = :rsync
   deploy.host = 'www.fdiary.net'
-  deploy.path = 'public_html/test/'
+  deploy.path = 'public_html/test2/'
   deploy.user = 'rui'
 end

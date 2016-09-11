@@ -11,7 +11,6 @@
     <title><%= current_page.data.title || "The Middleman" %></title>
 
     <%= stylesheet_link_tag "styles" %>
-    <%= stylesheet_link_tag "ie10-viewport-bug-workaround" %>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -20,25 +19,26 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <div class="container-fluid">
-      <div class="row header">
-        <nav>
-          <ul class="nav nav-justified">
-            <li><%= link_to 'Home', './' %></li>
-            <li><%= link_to 'About me', './about.html' %></li>
-            <li><%= link_to 'Publications', './publications.html' %></li>
-            <li><%= link_to 'Photos', './photos.html' %></li>
+    <div class="o-layout">
+      <header class="s-header">
+        <nav class="s-nav">
+	  <div class="s-nav__toggle"><a href="#" class="s-nav__trigger"><span class="ion-navicon-round"></span></a></div>
+          <ul class="s-nav__menu">
+            <li class="s-nav__item"><%= link_to 'Home', './', :class=>"s-nav__link" %></li>
+            <li class="s-nav__item"><%= link_to 'About me', './about.html', :class=>"s-nav__link" %></li>
+            <li class="s-nav__item"><%= link_to 'Publications', './publications.html', :class=>"s-nav__link" %></li>
+            <li class="s-nav__item"><%= link_to 'Photos', './photos.html', :class=>"s-nav__link" %></li>
           </ul>
         </nav>
-      </div>
+      </header>
 
-      <div class="row main">
-        <article class="col-sm-8">
+      <main class="s-main">
+        <article class="s-article">
           <div>
             <%= yield %>
           </div>
         </article>
-        <aside class="col-sm-4">
+        <aside class="s-aside">
           <div>
             <h1>Contact</h1>
             <p> Rui ITO, 伊東 瑠衣 (Ph.D.)<br />
@@ -56,22 +56,19 @@
               <li><a href="http://www.jamstec.go.jp/sousei/">SOUSEI program</a></li>
               <li><a href="http://ssrs.dpri.kyoto-u.ac.jp/~hp/index_en.html">Severe Storm & Atmos. Environ., Kyoto Univ.</a></li>
               <li><a href="http://www-clim.kugi.kyoto-u.ac.jp/clim/index_e.html">Climate Physics Lab., Kyoto Univ.</a></li>
-              <li><a href="https://www.facebook.com/profile.php?id=100001967558545">Facebook</a></li>
+              <li><a href="https://www.facebook.com/rui.ito.33">Facebook</a></li>
             </ul>
           </div>
         </aside>
-      </div>
+      </main>
 
       <!-- Site footer -->
-      <div class="row footer">
-        <footer>
-          <p>&copy; 2016 Rui ITO.</p>
-        </footer>
-      </div>
+      <footer class="s-footer">
+        <div class="s-footer__copyright">&copy; 2016 Rui ITO.</div>
+      </footer>
 
     </div> <!-- /container -->
 
-    <%= javascript_include_tag "ie10-viewport-bug-workaround" %>
     <%= javascript_include_tag "custom" %>
   </body>
 </html>
