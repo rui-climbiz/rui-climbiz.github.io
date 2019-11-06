@@ -9,7 +9,11 @@
     <meta name="author" content="Rui ITO">
     <title>{{ page.title | escape }}</title>
     {% assign custom_url = site.url | append: site.baseurl %}
+    {% if site.github.url %}
+    {% assign full_base_url = site.github.url %}
+    {% else %}
     {% assign full_base_url = custom_url %}
+    {% endif %}
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: full_base_url }}">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="{{ "/js/main.js" | prepend: full_base_url }}"></script>
