@@ -8,15 +8,9 @@
     <meta name="description" content="{{ page.description | escape }}">
     <meta name="author" content="Rui ITO">
     <title>{{ page.title | escape }}</title>
-    {% assign custom_url = site.url | append: site.baseurl %}
-    {% if site.github.url %}
-    {% assign full_base_url = site.github.url %}
-    {% else %}
-    {% assign full_base_url = custom_url %}
-    {% endif %}
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: full_base_url }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="{{ "/js/main.js" | prepend: full_base_url }}"></script>
+    <script src="{{ "/js/main.js" | relative_url }}"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -28,10 +22,10 @@
         <nav class="s-nav">
 	  <div class="s-nav__toggle"><a href="#" class="s-nav__trigger"><span class="ion-navicon-round"></span></a></div>
           <ul class="s-nav__menu">
-            <li class="s-nav__item"><a class="s-nav__link" href="{{ "/" | prepend: full_base_url }}">Home</a></li>
-            <li class="s-nav__item"><a class="s-nav__link" href="{{ "/about.html" | prepend: full_base_url }}">About me</a></li>
-            <li class="s-nav__item"><a class="s-nav__link" href="{{ "/publications.html" | prepend: full_base_url }}">Publications</a></li>
-            <li class="s-nav__item"><a class="s-nav__link" href="{{ "/photos.html" | prepend: full_base_url }}">Photos</a></li>
+            <li class="s-nav__item"><a class="s-nav__link" href="{{ "/" | relative_url }}">Home</a></li>
+            <li class="s-nav__item"><a class="s-nav__link" href="{{ "/about.html" | relative_url }}">About me</a></li>
+            <li class="s-nav__item"><a class="s-nav__link" href="{{ "/publications.html" | relative_url }}">Publications</a></li>
+            <li class="s-nav__item"><a class="s-nav__link" href="{{ "/photos.html" | relative_url }}">Photos</a></li>
           </ul>
         </nav>
       </header>
